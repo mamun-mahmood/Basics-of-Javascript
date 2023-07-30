@@ -6,6 +6,9 @@ function heavyTask() {
   }
   return i;
 }
+// memoize function that takke the task heavy function as an argument and return another function
+// that will cache the result of the task heavy function and return the cached value if the function is called again
+
 const memoize = (fn) => {
   const cache = {};
   return (value) => {
